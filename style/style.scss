@@ -1,0 +1,399 @@
+$nav-item-fz: 14px;
+$main-text-fz: 16px;
+$footer-text-fz: 12px;
+$big-text: 32px;
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1170px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+@mixin btn($bg, $text-color) {
+    font-family: 'Roboto';
+    width: 205px;
+    height: 64px;
+    font-size: 12px;
+    border: none;
+    background: $bg;
+    color: $text-color;
+}
+
+.wrapper {
+    .navbar {
+        position: absolute;
+        width: 100%;
+        background: white;
+
+        .nav-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px 0;
+            max-width: 1170px;
+            width: 80%;
+            margin: 0 auto;
+
+            .navigation-logo {
+                width: 10%;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .navigation-items {
+                width: 40%;
+
+                .list {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .list-item {
+                        a {
+                            font-family: 'Roboto';
+                            color: #555248;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            .navigation-icons {
+                width: 8%;
+                display: flex;
+                justify-content: space-between;
+                .heart{
+                    position: relative;
+                }
+                .heart::before{
+                    content: '1';
+                    font-size: 8px;
+                    font-family: 'Roboto';
+                    position: absolute;
+                    top: -20%;
+                    right: -20%;
+                    width: 13px;
+                    height: 13px;
+                    background: #E6C8B4;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}
+
+header {
+    height: 100vh;
+    background: url(../img/main-bg.png) center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 100%;
+
+        .header-text-cont {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            position: relative;
+
+            .header-title {
+                font-family: 'Playfair Display';
+                color: #1b1A17;
+
+                h1 {
+                    font-size: 45px;
+                    font-weight: 400;
+                }
+
+                h2 {
+                    font-size: 30px;
+                    font-weight: 400;
+                }
+            }
+
+            .header-title::before {
+                content: '';
+                position: absolute;
+                top: 20%;
+                left: -15%;
+                width: 50px;
+                height: 1px;
+                background: #8b8371;
+            }
+
+            .header-text {
+                font-size: $main-text-fz;
+                width: 50%;
+                font-weight: 300;
+                font-family: 'Roboto';
+                color: rgba(27, 26, 23, 0.82);
+            }
+
+            .header-btn {
+                button {
+                    @include btn(#444240, #ffffff);
+                }
+            }
+        }
+
+        .header-img {
+            width: 45%;
+            display: flex;
+            position: relative;
+            align-self: flex-end;
+
+            .header-img-before-after {
+                font-family: 'Roboto';
+                width: 100%;
+                height: 100%;
+                img {
+                    width: 80%;
+                    align-self: flex-end;
+                    position: relative;
+                }
+            }
+
+            .header-img-before-after::before {
+                content: '22 000 ₽';
+                position: absolute;
+                top: 18.5%;
+                left: -15%;
+            }
+            .header-img-before-after::after {
+                content: '28 mm diameter';
+                position: absolute;
+                top: 78.7%;
+                left: 77%;
+            }
+        }
+
+        .header-img::before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: 0;
+            width: 50px;
+            height: 1px;
+            background: #8b8371;
+        }
+
+        .header-img::after {
+            content: '';
+            position: absolute;
+            top: 80%;
+            left: 65%;
+            width: 50px;
+            height: 1px;
+            background: #8b8371;
+        }
+    }
+}
+
+main{
+    .products-section{
+        font-family: 'Playfair Display';
+        .products-title{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            h2{
+                text-align: center;
+                font-size: $big-text;
+                padding: 50px 0;
+            }
+        }
+        .products{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 0 90px;
+            .product{
+                padding: 40px;
+                background: #FDFDFB;
+                width: 30%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                font-size: 14px;
+                .price{
+                    h2{
+                        font-size: 14px;
+                    }
+                }
+                .product-img-cont{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    box-shadow: 4px 2px 2px rgba(85, 82, 72, 0.23);
+                    img{
+                        width: 90%;
+                    }
+                }
+                .product-btn{
+                    width: 40%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .line{
+                        width: 30px;
+                        height: 1px;
+                        background: #8B8371;
+                    }
+                }
+            }
+        }
+    }
+    .quality-section{
+        background: url(../img/bg-2.png) center/cover no-repeat;
+        padding: 50px 0;
+        .flex{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .quality-img-cont{
+                width: 40%;
+                display: flex;
+                flex-direction: column;
+                img{
+                    width: 100%;
+                }
+                p{
+                    display: flex;
+                    align-items: center;
+                    font-size: 12px;
+                    gap: 20px;
+                    justify-content: flex-end;
+                    padding: 20px 80px 0;
+                }
+            }
+            .quality-text-cont{
+                width: 35%;
+                font-family: 'Playfair Display';
+                display: flex;
+                flex-direction: column;
+                gap: 45px;
+                h2{
+                    font-size: $big-text;
+                    font-weight: 400;
+                }
+                p{
+                    font-size: $main-text-fz;
+                }
+                button{
+                    @include btn(#D4B098, #ffffff);
+                    font-size: 12px;
+                    font-family: 'Roboto';
+                }
+            }
+        }
+    }
+    .news-section{
+        padding: 90px 0;
+        .flex{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .news-text{
+                width: 45%;
+                h2{
+                    font-family: 'Playfair Display';
+                    font-size: $big-text;
+                    font-weight: 400;
+                    margin-bottom: 40px;
+                }
+                p{
+                    font-family: 'Roboto';
+                    font-weight: 400;
+                    font-size: $main-text-fz;
+                    margin-bottom: 120px;
+                    width: 80%;
+                    span{
+                        font-weight: 700;
+                    }
+                }
+                .news-icons{
+                    width: 93px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+            .news-img{
+                width: 55%;
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                grid-template-rows: 1fr 1fr;
+                gap: 10px;
+                img:nth-child(2){
+                    grid-column-start: 2;
+                    grid-row-start: 1;
+                    grid-row-end: 3;
+                }
+                
+            }
+        }
+    }
+}
+
+footer{
+    background: #444240;
+    color: white;
+    .footer-content{
+        display: flex;
+        justify-content: space-between;
+        padding: 80px 0;
+        div{
+            display: flex;
+            flex-direction: column;
+            gap: 33px;
+            h3{
+                font-family: 'Roboto';
+                font-size: 14px;
+                font-weight: 700;
+            }
+            .footer-information{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                p{
+                    font-family: 'Roboto';
+                    font-size: 12px;
+                    font-weight: 400;
+                    color:rgba(255, 255, 255, 0.75);
+                }
+            }
+        }
+    }
+}

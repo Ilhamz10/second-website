@@ -1,0 +1,504 @@
+@charset "UTF-8";
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1170px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.wrapper .navbar {
+    position: absolute;
+    width: 100%;
+    background: white;
+}
+.wrapper .navbar .nav-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 30px 0;
+    max-width: 1170px;
+    width: 80%;
+    margin: 0 auto;
+}
+.wrapper .navbar .nav-content .navigation-logo {
+    width: 10%;
+}
+.wrapper .navbar .nav-content .navigation-logo img {
+    width: 100%;
+}
+.wrapper .navbar .nav-content .navigation-items {
+    width: 40%;
+}
+.wrapper .navbar .nav-content .navigation-items .list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.wrapper .navbar .nav-content .navigation-items .list .list-item a {
+    font-family: "Roboto";
+    color: #555248;
+    font-size: 14px;
+}
+.wrapper .navbar .nav-content .navigation-icons {
+    width: 8%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.wrapper .navbar .nav-content .navigation-icons .heart {
+    position: relative;
+}
+.wrapper .navbar .nav-content .navigation-icons .heart::before {
+    content: "1";
+    font-size: 8px;
+    font-family: "Roboto";
+    position: absolute;
+    top: -20%;
+    right: -20%;
+    width: 13px;
+    height: 13px;
+    background: #E6C8B4;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-radius: 50%;
+}
+
+header {
+    height: 100vh;
+    background: url(../img/main-bg.png) center/cover no-repeat;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+header .header-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: 100%;
+}
+header .header-content .header-text-cont {
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 25px;
+    position: relative;
+}
+header .header-content .header-text-cont .header-title {
+    font-family: "Playfair Display";
+    color: #1b1A17;
+}
+header .header-content .header-text-cont .header-title h1 {
+    font-size: 45px;
+    font-weight: 400;
+}
+header .header-content .header-text-cont .header-title h2 {
+    font-size: 30px;
+    font-weight: 400;
+}
+header .header-content .header-text-cont .header-title::before {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: -15%;
+    width: 50px;
+    height: 1px;
+    background: #8b8371;
+}
+header .header-content .header-text-cont .header-text {
+    font-size: 16px;
+    width: 50%;
+    font-weight: 300;
+    font-family: "Roboto";
+    color: rgba(27, 26, 23, 0.82);
+}
+header .header-content .header-text-cont .header-btn button {
+    font-family: "Roboto";
+    width: 205px;
+    height: 64px;
+    font-size: 12px;
+    border: none;
+    background: #444240;
+    color: #ffffff;
+}
+header .header-content .header-img {
+    width: 45%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+}
+header .header-content .header-img .header-img-before-after {
+    font-family: "Roboto";
+    width: 100%;
+    height: 100%;
+}
+header .header-content .header-img .header-img-before-after img {
+    width: 80%;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    position: relative;
+}
+header .header-content .header-img .header-img-before-after::before {
+    content: "22 000 ₽";
+    position: absolute;
+    top: 18.5%;
+    left: -15%;
+}
+header .header-content .header-img .header-img-before-after::after {
+    content: "28 mm diameter";
+    position: absolute;
+    top: 78.7%;
+    left: 77%;
+}
+header .header-content .header-img::before {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 50px;
+    height: 1px;
+    background: #8b8371;
+}
+header .header-content .header-img::after {
+    content: "";
+    position: absolute;
+    top: 80%;
+    left: 65%;
+    width: 50px;
+    height: 1px;
+    background: #8b8371;
+}
+
+main .products-section {
+    font-family: "Playfair Display";
+}
+main .products-section .products-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+main .products-section .products-title h2 {
+    text-align: center;
+    font-size: 32px;
+    padding: 50px 0;
+}
+main .products-section .products {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 0 90px;
+}
+main .products-section .products .product {
+    padding: 40px;
+    background: #FDFDFB;
+    width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+}
+main .products-section .products .product .price h2 {
+    font-size: 14px;
+}
+main .products-section .products .product .product-img-cont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-radius: 50%;
+    -webkit-box-shadow: 4px 2px 2px rgba(85, 82, 72, 0.23);
+            box-shadow: 4px 2px 2px rgba(85, 82, 72, 0.23);
+}
+main .products-section .products .product .product-img-cont img {
+    width: 90%;
+}
+main .products-section .products .product .product-btn {
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+main .products-section .products .product .product-btn .line {
+    width: 30px;
+    height: 1px;
+    background: #8B8371;
+}
+main .quality-section {
+    background: url(../img/bg-2.png) center/cover no-repeat;
+    padding: 50px 0;
+}
+main .quality-section .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+main .quality-section .flex .quality-img-cont {
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+main .quality-section .flex .quality-img-cont img {
+    width: 100%;
+}
+main .quality-section .flex .quality-img-cont p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 12px;
+    gap: 20px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 20px 80px 0;
+}
+main .quality-section .flex .quality-text-cont {
+    width: 35%;
+    font-family: "Playfair Display";
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 45px;
+}
+main .quality-section .flex .quality-text-cont h2 {
+    font-size: 32px;
+    font-weight: 400;
+}
+main .quality-section .flex .quality-text-cont p {
+    font-size: 16px;
+}
+main .quality-section .flex .quality-text-cont button {
+    font-family: "Roboto";
+    width: 205px;
+    height: 64px;
+    font-size: 12px;
+    border: none;
+    background: #D4B098;
+    color: #ffffff;
+    font-size: 12px;
+    font-family: "Roboto";
+}
+main .news-section {
+    padding: 90px 0;
+}
+main .news-section .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+main .news-section .flex .news-text {
+    width: 45%;
+}
+main .news-section .flex .news-text h2 {
+    font-family: "Playfair Display";
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+main .news-section .flex .news-text p {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 120px;
+    width: 80%;
+}
+main .news-section .flex .news-text p span {
+    font-weight: 700;
+}
+main .news-section .flex .news-text .news-icons {
+    width: 93px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+main .news-section .flex .news-img {
+    width: 55%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 10px 2fr;
+    grid-template-columns: 1fr 2fr;
+    -ms-grid-rows: 1fr 10px 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+main .news-section .flex .news-img > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+}
+main .news-section .flex .news-img > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+}
+main .news-section .flex .news-img > *:nth-child(3) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+}
+main .news-section .flex .news-img > *:nth-child(4) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+}
+main .news-section .flex .news-img img:nth-child(2) {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    -ms-grid-row-span: 2;
+    grid-row-end: 3;
+}
+
+footer {
+    background: #444240;
+    color: white;
+}
+footer .footer-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 80px 0;
+}
+footer .footer-content div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 33px;
+}
+footer .footer-content div h3 {
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 700;
+}
+footer .footer-content div .footer-information {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px;
+}
+footer .footer-content div .footer-information p {
+    font-family: "Roboto";
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.75);
+}
